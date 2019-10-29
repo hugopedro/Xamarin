@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TestDrive.MainPage">
+             Title="Test Drive"
+             x:Class="TestDrive.Views.ListagemView">
 
         <!-- Esse x:Name="listViewVeiculos é pra poder acessar a lista de dados através do código C# (MainPage.xaml.cs)
         o x:Name é pra dar um nome ao componente, no caso listViewVeiculos 

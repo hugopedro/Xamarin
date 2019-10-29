@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace TestDrive
+namespace TestDrive.Views
 {
     public class Veiculo
     {
@@ -18,11 +18,11 @@ namespace TestDrive
         }
     }
 
-    public partial class MainPage : ContentPage
+    public partial class ListagemView : ContentPage
     {
         public List<Veiculo> Veiculos { get; set; }
 
-        public MainPage()
+        public ListagemView()
         {
             InitializeComponent();
 
@@ -48,8 +48,12 @@ namespace TestDrive
 
         private void listViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var veiculo = (Veiculo)e.Item;
-            DisplayAlert("Test Drive", string.Format("Voce tocou no modelo '{0}', que custa {1}", veiculo.nome, veiculo.preco), "ok");
+            Navigation.PushAsync(new DetalheView());
+            //New DetalheView pois chamará uma nova janela ao navegar
+            /*PushAsync , método assíncrono que funcionará assim que a aplicação estiver
+disponível para tal, retornando o controle para ela imediatamente a partir da execução deste comando, sem que ela seja
+bloqueada.*/
         }
     }
 }
+ 

@@ -1,4 +1,5 @@
 ﻿using System;
+using TestDrive.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +10,8 @@ namespace TestDrive
         public App()
         {
             InitializeComponent();
-
-            MainPage = new TestDrive.MainPage();
+            // isso é pra poder gerar uma nova página ao clicar!
+            MainPage = new NavigationPage(new ListagemView());
         }
 
         protected override void OnStart()
