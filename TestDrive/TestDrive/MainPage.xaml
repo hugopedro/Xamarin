@@ -6,18 +6,25 @@
              mc:Ignorable="d"
              x:Class="TestDrive.MainPage">
 
-    <StackLayout Padding="25">
+        <!-- Esse x:Name="listViewVeiculos é pra poder acessar a lista de dados através do código C# (MainPage.xaml.cs)
+        o x:Name é pra dar um nome ao componente, no caso listViewVeiculos 
+        ItemsSource é pra poder pegar a lista de valores que vai preencher na tela-->
         <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <Label Text="{Binding nome}"></Label>
+                            <!--Horizontal pra nao tapar o segundo atributo
+                            VerticalTextAlignment="Center" é pro segundo atributo nao ficar jogado por ai e sim mostrar no centro-->
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding nome}" FontSize="20" VerticalTextAlignment="Center"></Label>
+                                <Label Text=" - " VerticalTextAlignment="Center"></Label>
+                                <Label Text="{Binding preco}" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                            </StackLayout>
                         </ViewCell.View>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackLayout>
 
 </ContentPage>
