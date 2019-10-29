@@ -10,7 +10,7 @@ namespace TestDrive
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new TestDrive.MainPage();
         }
 
         protected override void OnStart()
