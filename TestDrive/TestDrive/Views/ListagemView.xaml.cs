@@ -48,7 +48,8 @@ namespace TestDrive.Views
 
         private void listViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Navigation.PushAsync(new DetalheView());
+            var veiculo = (Veiculo)e.Item;
+            Navigation.PushAsync(new DetalheView(veiculo)); //pois veiculo pra poder puxar a pagina linkada ao veiculo
             //New DetalheView pois chamará uma nova janela ao navegar
             /*PushAsync , método assíncrono que funcionará assim que a aplicação estiver
 disponível para tal, retornando o controle para ela imediatamente a partir da execução deste comando, sem que ela seja
