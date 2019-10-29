@@ -8,8 +8,10 @@
 
         <!-- Esse x:Name="listViewVeiculos é pra poder acessar a lista de dados através do código C# (MainPage.xaml.cs)
         o x:Name é pra dar um nome ao componente, no caso listViewVeiculos 
-        ItemsSource é pra poder pegar a lista de valores que vai preencher na tela-->
-        <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}">
+        ItemsSource é pra poder pegar a lista de valores que vai preencher na tela
+        observe o Margin está  na mesma linha do listView, é pra nao deixar o texto colado-->
+        <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}" Margin="25"
+                  ItemTapped="listViewVeiculos_ItemTapped"> <!--<<< isso ai é pra disparar um evento qd o usuario tocar em um item da ListView-->
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -19,7 +21,7 @@
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding nome}" FontSize="20" VerticalTextAlignment="Center"></Label>
                                 <Label Text=" - " VerticalTextAlignment="Center"></Label>
-                                <Label Text="{Binding preco}" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                                <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>

@@ -11,6 +11,11 @@ namespace TestDrive
     {
         public string nome { get; set; }
         public decimal preco { get; set; }
+
+        public string PrecoFormatado
+        {
+            get { return string.Format("R$ {0}", preco); }
+        }
     }
 
     public partial class MainPage : ContentPage
@@ -39,6 +44,12 @@ namespace TestDrive
             };
 
             this.BindingContext = this;
+        }
+
+        private void listViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var veiculo = (Veiculo)e.Item;
+            DisplayAlert("Test Drive", string.Format("Voce tocou no modelo '{0}', que custa {1}", veiculo.nome, veiculo.preco), "ok");
         }
     }
 }
