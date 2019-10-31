@@ -17,10 +17,8 @@ namespace TestDrive.Views
         public DetalheView(Veiculo veiculo) 
         {
             InitializeComponent();
-            this.Title = veiculo.nome; // é pra puxar o nome do veiculo pra por no title da pagina
-            // porem deve-se ir no ListagemView.xaml.cs pois o construtor ta sendo modificado então deve-se ir lá porque está chamando ele e modificar
             this.veiculo = veiculo;
-            this.BindingContext = this;
+            this.BindingContext = this; // é pra poder definir o titulo no detalheview.xaml
         }
 
         private void buttonProximo_Clicked(object sender, EventArgs e)
