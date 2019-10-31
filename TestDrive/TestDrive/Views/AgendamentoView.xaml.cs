@@ -16,7 +16,8 @@ namespace TestDrive.Views
         // assim é possível usar o veiculo em coisas, como o titulo.
         //porem só isso nao é suficiente, é necessario ir no detalheView
         public AgendamentoView(Veiculo veiculo)
-        {
+        { // tem que ir no detalheview.xaml.cs e passar o parâmetro!
+            //setando o titulo da pagina de agendamentoview.testdrive
             InitializeComponent();
             this.Title = veiculo.nome;
         }

@@ -4,7 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TestDrive.Views.DetalheView">
+             x:Class="TestDrive.Views.DetalheView"
+             Title="{Binding Veiculo.Nome}">
+    <!--Está bindando a propiedade veículo escrita no .cs-->
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Essa é a pagina de detalhes"
@@ -13,5 +15,5 @@
         </StackLayout>
     </ContentPage.Content> <!--O verticalOptions é pra fazer que o botao fique preso no final da pagina-->
     <Button x:Name="buttonProximo" Text="Próximo" Clicked="buttonProximo_Clicked" VerticalOptions="End"></Button>
-    <!--x:Name é pra dar um nome ao item, no caso botão-->
+    <!--x:Name é pra dar um nome ao item, no caso botão, e pra funcionar tem q elaborar a função no code behind (.cs)-->
 </ContentPage>
