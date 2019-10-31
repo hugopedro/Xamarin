@@ -5,9 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TestDrive.Views.AgendamentoView"
-             Title="{Binding Veiculo.Nome}">
+             Title="{Binding veiculo.nome}"> 
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout> <!-- ali no title era pra ser maiusculo mas vai ficar minusculo-->
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

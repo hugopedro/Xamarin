@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TestDrive.Views.DetalheView"
-             Title="{Binding Veiculo.Nome}">
+             Title="{Binding veiculo.nome}">
     <!--Está bindando a propiedade veículo escrita no .cs-->
     <ContentPage.Content>
         <StackLayout>
